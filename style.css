@@ -1,0 +1,427 @@
+/* --- GOOGLE FONTS IMPORT --- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Bangers&display=swap');
+
+/* Dru Down Website Styles */
+
+:root {
+    --oakland-blue: #0047AB;
+    --oakland-green: #005030;
+    --oakland-gold: #FFD700;
+    --oakland-patina: #C4A484;
+    --oakland-earth: #2E1A15;
+    --oakland-leather: #181818;
+    --font-main: 'Bebas Neue', 'Segoe UI', Arial, sans-serif;
+    --font-heading: 'Bangers', 'Bebas Neue', 'Impact', 'Arial Black', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background: url('assets/drudown-background-image.jpg') center top/cover no-repeat fixed, var(--oakland-leather);
+    color: var(--oakland-gold);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+nav {
+    background: rgba(0, 71, 171, 0.98);
+    color: var(--oakland-gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    color: var(--oakland-gold);
+    text-shadow: 2px 2px 8px #000, 0 0 8px var(--oakland-gold);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links li a {
+    color: var(--oakland-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.2s, text-shadow 0.2s;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.nav-links li a:hover {
+    color: var(--oakland-patina);
+    text-shadow: 0 0 8px var(--oakland-gold), 0 0 2px #fff;
+    border-bottom: 2px solid var(--oakland-gold);
+}
+
+.nav-links li a[href="#services"] {
+    display: none;
+}
+
+.nav-links li a[href="#shop"] {
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--oakland-gold);
+    border-radius: 2px;
+}
+
+.hero {
+    background: linear-gradient(120deg, rgba(0,71,171,0.65) 60%, rgba(44,44,44,0.65)), url('assets/drudown-banner-image.avif') center/cover no-repeat;
+    color: var(--oakland-gold);
+    text-align: center;
+    padding: 7rem 2rem 4rem 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #000, 2px 2px 8px #000;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: var(--oakland-gold);
+    filter: none;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 8px #000;
+}
+
+#sample-player {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 3px solid var(--oakland-gold);
+    border-radius: 12px;
+    box-shadow: 0 0 16px var(--oakland-gold), 0 2px 8px #000;
+    background: #222;
+}
+
+section {
+    padding: 3.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+    color: var(--oakland-gold);
+    text-shadow: 2px 2px 8px #000, 0 0 8px var(--oakland-gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: center;
+    background: rgba(0,71,171,0.15);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 2rem 1rem;
+}
+
+.about-img {
+    width: 220px;
+    border-radius: 16px;
+    border: 4px solid var(--oakland-gold);
+    box-shadow: 0 0 12px var(--oakland-gold), 0 2px 8px #000;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 220px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 6px #000;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.service-card {
+    background: linear-gradient(120deg, var(--oakland-earth) 80%, var(--oakland-blue));
+    color: var(--oakland-gold);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    flex: 1 1 260px;
+    min-width: 220px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    margin-bottom: 1rem;
+    border: 2px solid var(--oakland-gold);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 0 24px var(--oakland-gold), 0 2px 12px #000;
+    z-index: 2;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+    background: linear-gradient(120deg, var(--oakland-earth) 80%, var(--oakland-blue));
+    border-radius: 14px;
+    padding: 1.5rem 1rem;
+    flex: 1 1 260px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    border: 2px solid var(--oakland-gold);
+    color: var(--oakland-gold);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.portfolio-item:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 24px var(--oakland-gold), 0 2px 12px #000;
+    z-index: 2;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+    border: 3px solid var(--oakland-gold);
+    box-shadow: 0 0 10px var(--oakland-gold), 0 2px 8px #000;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog-post {
+    background: linear-gradient(120deg, var(--oakland-earth) 80%, var(--oakland-blue));
+    border-radius: 10px;
+    padding: 1.2rem 1.7rem;
+    color: var(--oakland-gold);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.15);
+    border: 2px solid var(--oakland-gold);
+    font-size: 1.15rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 16px var(--oakland-gold), 0 2px 8px #000;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 420px;
+    margin: 0 auto;
+    background: rgba(0,71,171,0.10);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    border: 2px solid var(--oakland-gold);
+}
+
+.contact label {
+    font-weight: bold;
+    color: var(--oakland-gold);
+    letter-spacing: 1px;
+}
+
+.contact input, .contact textarea {
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1.5px solid var(--oakland-patina);
+    font-size: 1.1rem;
+    background: #fff;
+    color: #222;
+    font-family: var(--font-main);
+}
+
+.contact textarea {
+    min-height: 90px;
+}
+
+.contact button {
+    background: var(--oakland-gold);
+    color: var(--oakland-leather);
+    border: none;
+    border-radius: 6px;
+    padding: 0.9rem 1.7rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 8px var(--oakland-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact button:hover {
+    background: var(--oakland-patina);
+    color: #fff;
+    box-shadow: 0 0 16px var(--oakland-gold);
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.95rem;
+    min-height: 1em;
+}
+
+footer {
+    background: #001a33;
+    color: var(--oakland-gold);
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    border-top: 4px solid var(--oakland-gold);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.18);
+}
+
+/* --- Shop Section Styles --- */
+.shop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.shop-card {
+    background: linear-gradient(120deg, var(--oakland-earth) 80%, var(--oakland-blue));
+    color: var(--oakland-gold);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    flex: 1 1 260px;
+    min-width: 220px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    margin-bottom: 1rem;
+    border: 2px solid var(--oakland-gold);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.shop-card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 0 24px var(--oakland-gold), 0 2px 12px #000;
+    z-index: 2;
+}
+.shop-card img {
+    margin-bottom: 1rem;
+}
+.shop-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--oakland-gold);
+    color: var(--oakland-leather);
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 8px var(--oakland-gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.shop-btn:hover {
+    background: var(--oakland-patina);
+    color: #fff;
+    box-shadow: 0 0 16px var(--oakland-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .about-content, .services-grid, .portfolio-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.2rem;
+        background: var(--oakland-blue);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .about-img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1rem auto;
+    }
+}
